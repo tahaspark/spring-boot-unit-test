@@ -25,6 +25,7 @@ public class ToDoController {
 
     @RequestMapping(value = "/todo", method = RequestMethod.GET)
     public ResponseEntity<List<ToDo>> getAllToDo() {
+        logger.info("Just adding a line of code");
         logger.info("Returning all the ToDo´s");
         return new ResponseEntity<List<ToDo>>(toDoService.getAllToDo(), HttpStatus.OK);
     }
